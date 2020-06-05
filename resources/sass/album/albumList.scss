@@ -1,0 +1,73 @@
+.album-list-item{
+    width: 300px;
+    margin: 15px;
+}
+
+.margin-albums{
+    margin: 30px;
+}
+
+.card-artist{
+    color: $color-brown!important;
+}
+
+
+
+.pagination{
+    justify-content: center!important;
+    margin: 30px 0;
+    nav{
+        ul{
+            li{
+
+                span{
+                    color: $color-dark-orange!important;
+                }
+            }
+        }
+    }
+}
+.pagination > li > a
+{
+    background-color: white;
+    color: $color-dark-orange;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color:rgb(246, 100, 15, 0.5);
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: $color-orange !Important;
+    border: solid 1px $color-orange !Important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color:  rgb(246, 100, 15, 0.5)!Important;
+    border: solid 1px $color-orange;
+}
+
+
+
+
+.page-item.active .page-link {
+    background-color: rgb(246, 100, 15, 0.5)!important;
+    border-color: $color-dark-orange!important;
+}
+.card-link{
+    color: $color-dark-orange;
+    text-decoration: none;
+}
+.card-link:hover{
+    color: $color-brown;
+    text-decoration: none;
+}

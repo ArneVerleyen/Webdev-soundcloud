@@ -1,0 +1,26 @@
+.form-contact{
+
+    padding: 60px 50px;
+
+}
+input, textarea{
+    display: block;
+    box-sizing: border-box;
+    width: 80%;
+    padding: 10px;
+    margin: 10px!important;
+    font-size: 16px;
+    color: $color-orange;
+}
+
+.mail-btn{
+    background-color: $color-orange;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;
+}

@@ -1,0 +1,81 @@
+.page-header{
+    height: 40vh;
+    background-image: url('/images/yvette-de-wit-NYrVisodQ2M-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    div{
+        align-self: center;
+        width: 60vw;
+
+        h3{
+            color: whitesmoke;
+            background-color: rgb(246, 100, 15, 0.5);
+        }
+    }
+}
+
+.page-title{
+    margin: 50px 30px;
+    color: $color-orange;
+}
+
+.row{
+    justify-content: space-around;
+}
+.card{
+
+    width: 180px;
+    margin: 15px;
+    text-align: center;
+    h3{
+        color: $color-orange;
+    }
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.body-content{
+    margin: 60px 0px;
+}
+
+.body-content-center{
+    margin: 100px;
+    text-align: center;
+}
+
+.logo-oranje{
+    img{
+        width: 400px;
+    }
+}
+.body-text-right{
+    font-size: 28px;
+    color: $color-orange;
+    text-align: right;
+    margin: 50px
+}
+
+.body-text{
+    font-size: 28px;
+    color: $color-orange;
+    text-align: center;
+    margin: 50px
+}
+
+.orange-btn{
+    background-color: $color-orange;
+    border-radius: 50px;
+    border: none;
+    height: 100px;
+    width: 430px;
+    text-align: center;
+    p{
+        color: whitesmoke;
+        font-size: 24px;
+    }
+}

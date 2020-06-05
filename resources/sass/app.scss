@@ -1,0 +1,19 @@
+@import './variables.scss';
+@import './partials/header.scss';
+@import './partials/footer.scss';
+@import './pages/home.scss';
+@import './album/albumDetail.scss';
+@import './album/albumList.scss';
+@import './pages/contact.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import "~bootstrap/scss/bootstrap";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+

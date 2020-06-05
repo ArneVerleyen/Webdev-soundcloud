@@ -1,0 +1,32 @@
+
+.navigation{
+    background-color: $color-orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    .logo{
+        padding-left: 50px ;
+        img{
+            width: 120px;
+            height: auto;
+        }
+    }
+    .nav-list {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        padding-right: 50px;
+        li{
+            a{
+                padding-right: 20px ;
+                color: white;
+                font-size: 18px;
+                text-decoration: none;
+            }
+            a:hover{
+                color: $color-dark-orange;
+            }
+        }
+    }
+}
