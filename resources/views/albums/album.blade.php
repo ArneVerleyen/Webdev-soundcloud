@@ -8,7 +8,7 @@
     <div class="col-sm-12 col-lg-8">
         <h3>{{$album->title}}</h3>
         <p>{{$album->artist}}</p>
-        <p>{{$album->description}}</p>
+        <p>{{$description}}</p>
     </div>
 
 

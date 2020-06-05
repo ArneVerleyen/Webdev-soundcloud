@@ -16,12 +16,25 @@ class AlbumController extends Controller
 
 
 
-    public function show( $id) {
+    public function show(   $lang, $id) {
+
+        $language = $lang;
+
 
         $album = Album::where('id', $id)->first();
 
+
+        if ($language == 'nl') {
+            $description = $album->beschrijving;
+        } elseif($lang == 'en') {
+            $description = $album->description;
+        }
+
         return view('albums.album',[
-            'album'=>$album
+            'album'=>$album,
+            'description'=>$description,
+            'language'=> $language
+
         ]);
     }
     /*

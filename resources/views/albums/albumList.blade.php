@@ -11,10 +11,11 @@
                 <div class="card-body">
                     <h3 class="card-title">{{$album->title}}</h3>
                     <p class="card-artist">{{$album->artist}}</p>
-                    <a class="card-link" href="/albums/{{ $album->id }}">{{__('read')}}</a>
+                    <a class="card-link" href="{{route('albums.show',['language' => app()->getLocale(), 'id' => $album->id]) }}">{{__('read')}}</a>
                 </div>
             </div>
         </div>
+
 
     </div>
     @endforeach

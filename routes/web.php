@@ -27,10 +27,11 @@ Route::post('/contact', 'MailController@postContact')->name('contact.save');
 Route::get('/about', 'AboutController@getIndex')->name('about');
 
 Route::get('/albums', 'AlbumController@getIndex')->name('albums');
+Route::get('/albums/{id?}', 'AlbumController@show')->name('albums.show');
 
 
 });
 
-Route::get('/albums/{id}', 'AlbumController@show')->name('album.show');
+
 
 

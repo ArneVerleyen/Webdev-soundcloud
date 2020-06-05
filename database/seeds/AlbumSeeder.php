@@ -26,6 +26,7 @@ class AlbumSeeder extends Seeder
         $album->released =  $faker->date() .' '. $faker->time();
         $album->created_at = time();
         $album->img_url = $faker->imageUrl();
+        $album->beschrijving = $faker->paragraph(2);
 
         // bewaren
         $album->save();

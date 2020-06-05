@@ -14,9 +14,11 @@ class SetLanguage
      * @param  \Closure  $next
      * @return mixed
      */
+
     public function handle($request, Closure $next)
     {
         \App::setLocale($request->language);
         return $next($request);
     }
+
 }
