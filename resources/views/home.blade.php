@@ -38,7 +38,7 @@
             <img src="{{asset('images/logo-oranje.png')}}">
         </div>
         <p class="body-text-right col-6">
-            {{ $home->uitleg }}
+            {{ $home->uitleg}}
         </p>
 
     </div>
@@ -54,9 +54,11 @@
         <p class="body-text">
             {{ $home->doneer }}
         </p>
-        <button class="orange-btn">
-            <p>{{ $home->doneer_btn }}</p>
-        </button>
+        <a href="{{route('donate', app()->getLocale())}}">
+            <button class="orange-btn">
+                <p>{{ $home->doneer_btn }}</p>
+            </button>
+        </a>
     </div>
 </div>
 @endsection

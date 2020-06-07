@@ -266,6 +266,33 @@ textarea {
   margin-left: 10px;
 }
 
+.email-verzonden {
+  color: #F6640F;
+  font-size: 40px;
+  margin: 30vh 0 30vh 20vw;
+}
+
+.sidebar-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar-wrapper .sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  background: #F6640F;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.margin-for-sidebar {
+  margin-left: 270px;
+}
+
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors

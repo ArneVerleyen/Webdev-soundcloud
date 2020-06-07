@@ -5,6 +5,14 @@
 @import './album/albumDetail.scss';
 @import './album/albumList.scss';
 @import './pages/contact.scss';
+@import './mails/succes.scss';
+
+// Admin
+
+@import './admin/partials/sidebar.scss';
+@import './admin/dashboard.scss';
+
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @import "~bootstrap/scss/bootstrap";

@@ -10,5 +10,6 @@
     "email": "E-mail",
     "subject": "Onderwerp",
     "message": "Bericht",
-    "send": "Verzenden"
+    "send": "Verzenden",
+    "succes": "E-mail is verzonden."
 }

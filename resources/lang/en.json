@@ -10,5 +10,7 @@
     "email": "E-mail",
     "subject": "Subject",
     "message": "Message",
-    "send": "Send"
+    "send": "Send",
+    "succes": "E-mail was sent successfully."
+
 }

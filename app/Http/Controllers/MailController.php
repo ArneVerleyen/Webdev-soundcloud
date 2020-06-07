@@ -29,5 +29,7 @@ class MailController extends Controller
             //$message->priority(3);
             //$message->attach('pathToFile');
         });
+
+        return view('mails.verzonden');
     }
 }

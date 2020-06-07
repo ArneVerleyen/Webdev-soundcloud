@@ -29,8 +29,17 @@ Route::get('/about', 'AboutController@getIndex')->name('about');
 Route::get('/albums', 'AlbumController@getIndex')->name('albums');
 Route::get('/albums/{id?}', 'AlbumController@show')->name('albums.show');
 
+Route::get('/donate', 'DonateController@getDonatePage')->name('donate');
 
+
+Route::get('/admin', 'DashboardController@getIndex')->name('dashboard');
 });
+
+Route::name('webhooks.mollie')->post('webhooks/mollie', 'WebhookController@handle');
+
+// admin
+
+
 
 
 

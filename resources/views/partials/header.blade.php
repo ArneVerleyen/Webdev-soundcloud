@@ -8,7 +8,7 @@
         <ul class="nav-list">
             <li><a href="{{ route('home', app()->getLocale()) }}">Home</a></li>
             <li><a href=" {{route('about', app()->getLocale())}} "> {{__('about')}} </a></li>
-            <li><a href="">{{__('donate')}}</a></li>
+            <li><a href="{{route('donate', app()->getLocale())}}">{{__('donate')}}</a></li>
             <li><a href="{{route('albums', app()->getLocale())}}"> {{__('blogs')}} </a></li>
             <li><a href="">{{__('newsletter')}}</a></li>
             <li><a href=" {{route('contact', app()->getLocale())}} ">{{__('contact')}}</a></li>
