@@ -1,0 +1,25 @@
+table{
+    margin-top: 20px;
+    thead{
+        text-align: center;
+        th{
+            color: $color-orange;
+            border: solid 2px $color-dark-orange;
+            width: 20vw;
+            height: 35px;
+            font-size: 20px;
+        }
+    }
+    tbody{
+        tr{
+            text-align: center;
+            td{
+                color: $color-orange;
+                border: solid 1px $color-dark-orange;
+                width: 20vw;
+                height: 30px;
+                font-size: 18px;
+            }
+        }
+    }
+}

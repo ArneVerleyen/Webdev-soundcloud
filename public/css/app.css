@@ -285,12 +285,79 @@ textarea {
   height: 100vh;
   z-index: 999;
   background: #F6640F;
-  color: #fff;
+  color: whitesmoke;
   transition: all 0.3s;
+}
+
+.sidebar-wrapper .sidebar h3 {
+  padding: 10px;
+  border-bottom: whitesmoke 1px solid;
+}
+
+.sidebar-wrapper .sidebar ul {
+  padding: 10px;
+  list-style: none;
+  border-bottom: whitesmoke 1px solid;
+}
+
+.sidebar-wrapper .sidebar ul a {
+  text-decoration: none;
+  color: whitesmoke;
+  margin-top: 10px;
+}
+
+.sidebar-wrapper .sidebar ul a:hover {
+  color: #840000;
+}
+
+.sidebar-wrapper .sidebar ul a:active {
+  color: #630000;
+}
+
+.sidebar-wrapper .sidebar a {
+  padding: 10px;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.sidebar-wrapper .sidebar a:hover {
+  color: #840000;
+}
+
+.sidebar-wrapper .sidebar a:active {
+  color: #630000;
 }
 
 .margin-for-sidebar {
   margin-left: 270px;
+}
+
+table {
+  margin-top: 20px;
+}
+
+table thead {
+  text-align: center;
+}
+
+table thead th {
+  color: #F6640F;
+  border: solid 2px #CE4300;
+  width: 20vw;
+  height: 35px;
+  font-size: 20px;
+}
+
+table tbody tr {
+  text-align: center;
+}
+
+table tbody tr td {
+  color: #F6640F;
+  border: solid 1px #CE4300;
+  width: 20vw;
+  height: 30px;
+  font-size: 18px;
 }
 
 /*!

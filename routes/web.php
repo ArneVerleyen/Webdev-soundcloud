@@ -31,8 +31,11 @@ Route::get('/albums/{id?}', 'AlbumController@show')->name('albums.show');
 
 Route::get('/donate', 'DonateController@getDonatePage')->name('donate');
 
-
 Route::get('/admin', 'DashboardController@getIndex')->name('dashboard');
+
+Route::get('/admin/blogs', 'admin\BlogController@getIndex')->name('admin.blogs');
+Route::get('/admin/home', 'admin\HomeController@getIndex')->name('admin.home');
+
 });
 
 Route::name('webhooks.mollie')->post('webhooks/mollie', 'WebhookController@handle');

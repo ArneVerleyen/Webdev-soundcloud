@@ -9,8 +9,39 @@
         height: 100vh;
         z-index: 999;
         background: $color-orange;
-        color: #fff;
+        color: whitesmoke;
         transition: all 0.3s;
+        h3{
+            padding: 10px;
+            border-bottom: whitesmoke 1px solid;
+        }
+        ul{
+            padding: 10px;
+            list-style: none;
+            border-bottom: whitesmoke 1px solid;
+            a{
+                text-decoration: none;
+                color: whitesmoke;
+                margin-top: 10px;
+            }
+            a:hover{
+                color: $color-brown;
+            }
+            a:active{
+                color: $color-dark-brown;
+            }
+        }
+        a{
+            padding: 10px ;
+            color: whitesmoke;
+            text-decoration: none;
+        }
+        a:hover{
+            color: $color-brown;
+        }
+        a:active{
+            color: $color-dark-brown;
+        }
     }
 }
 
