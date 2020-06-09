@@ -11,6 +11,7 @@ class Album extends Model
         'title',
         'artist',
         'description',
+        'beschrijving',
         'released',
         'created_at',
         'img_url',

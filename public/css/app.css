@@ -341,7 +341,8 @@ table thead {
 }
 
 table thead th {
-  color: #F6640F;
+  background-color: #F6640F;
+  color: whitesmoke;
   border: solid 2px #CE4300;
   width: 20vw;
   height: 35px;
@@ -354,9 +355,9 @@ table tbody tr {
 
 table tbody tr td {
   color: #F6640F;
-  border: solid 1px #CE4300;
+  border: solid 2px #CE4300;
   width: 20vw;
-  height: 30px;
+  height: 40px;
   font-size: 18px;
 }
 

@@ -3,7 +3,8 @@ table{
     thead{
         text-align: center;
         th{
-            color: $color-orange;
+            background-color: $color-orange;
+            color: whitesmoke;
             border: solid 2px $color-dark-orange;
             width: 20vw;
             height: 35px;
@@ -15,9 +16,9 @@ table{
             text-align: center;
             td{
                 color: $color-orange;
-                border: solid 1px $color-dark-orange;
+                border: solid 2px $color-dark-orange;
                 width: 20vw;
-                height: 30px;
+                height: 40px;
                 font-size: 18px;
             }
         }

@@ -33,14 +33,27 @@ Route::get('/donate', 'DonateController@getDonatePage')->name('donate');
 
 Route::get('/admin', 'DashboardController@getIndex')->name('dashboard');
 
-Route::get('/admin/blogs', 'admin\BlogController@getIndex')->name('admin.blogs');
-Route::get('/admin/home', 'admin\HomeController@getIndex')->name('admin.home');
+
 
 });
 
 Route::name('webhooks.mollie')->post('webhooks/mollie', 'WebhookController@handle');
 
 // admin
+
+// Blogs
+Route::get('admin/blogs', 'admin\BlogController@getIndex')->name('admin.blogs');
+Route::get('admin/blogs/new', 'admin\BlogController@getCreate')->name('blogs.new');
+Route::get('admin/blogs/{album?}', 'admin\BlogController@getEdit')->name('blogs.edit');
+Route::post('admin/blogs/save', 'admin\BlogController@postSave')->name('blogs.save');
+Route::delete('admin/blogs/{album?}', 'admin\BlogController@destroy')->name('blogs.destroy');
+
+// Home
+Route::get('admin/home', 'admin\HomeController@getIndex')->name('admin.home');
+Route::get('admin/home/new', 'admin\HomeController@getCreate')->name('home.new');
+Route::get('admin/home/{language?}', 'admin\HomeController@getEdit')->name('home.edit');
+Route::post('admin/home/save', 'admin\HomeController@postSave')->name('home.save');
+Route::delete('admin/home/{language?}', 'admin\HomeController@destroy')->name('home.destroy');
 
 
 
