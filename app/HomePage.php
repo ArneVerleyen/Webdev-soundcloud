@@ -15,5 +15,6 @@ class HomePage extends Model
         'doneer',
         'doneer_btn',
         'language',
+        'id',
     ];
 }

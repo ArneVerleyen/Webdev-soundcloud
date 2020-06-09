@@ -34,7 +34,7 @@
                     {{$home->header}}
                 </td>
                 <td>
-                    <form method="POST" action="{{route('blogs.destroy', $home->language)}}">
+                    <form method="POST" action="{{route('home.destroy', $home->id)}}">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
 
@@ -42,7 +42,7 @@
                             <input type="submit" class="btn btn-danger delete" value="Delete">
                         </div>
                     </form>
-                    <a class="edit btn btn-edit" href="{{route('blogs.edit', $home->language)}}">Edit</a>
+                    <a class="edit btn btn-edit" href="{{route('home.edit', $home->id)}}">Edit</a>
 
                 </td>
             </tr>

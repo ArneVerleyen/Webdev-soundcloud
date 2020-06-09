@@ -11,32 +11,26 @@ class DonateController extends Controller
         return view('donneer.donate');
     }
 
-    public function getMakePayment() {
+    public function getMakePayment(Request $r)
+    {   $value = (string)$r->amount;
+        $currency = (string)$r->currency;
 
-    $payment = Mollie::api()->payments->create([[
-        "amount" => [
-            "currency" => "EUR",
-            "value" => "10.00" // You must send the correct number of decimals, thus we enforce the use of strings
-        ],
-        "description" => "Order #12345",
-        "redirectUrl" => route('webhooks.mollie'),
-        "webhookUrl" => route('order.success'),
-        "metadata" => [
-            "order_id" => "12345",
-        ],
-    ]]);
 
-    $payment = Mollie::api()->payments->get($payment->id);
+        $payment = Mollie::api()->payments->create([
+            "amount" => [
+                "currency" => $currency,
+                "value" => $value // You must send the correct number of decimals, thus we enforce the use of strings
+            ],
+            "description" => "Order #12345",
+            "redirectUrl" => route('donate', app()->getLocale()),
+            "webhookUrl" => 'https://0de5f2afd2d9.ngrok.io/webhooks/mollie'
+        ]);
 
-    // redirect customer to Mollie checkout page
-    return redirect($payment->getCheckoutUrl(), 303);
+        $payment = Mollie::api()->payments->get($payment->id);
 
-    if ($payment->isPaid()) {
-    echo 'Payment received.';
-    // Do your thing ...
-        }
+        // redirect customer to Mollie checkout page
+        return redirect($payment->getCheckoutUrl(), 303);
     }
-
 
 
 }

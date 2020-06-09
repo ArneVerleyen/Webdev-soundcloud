@@ -38,14 +38,14 @@ class HomeController extends Controller
             'uitleg' => 'required|max:600',
             'abonneer' => 'required|max:200',
             'abonneer_btn' => 'required',
-            'donneer' => 'required|max:150',
-            'donneer_btn' => 'required|max:150',
+            'doneer' => 'required|max:150',
+            'doneer_btn' => 'required|max:150',
             'language' => 'required|max:3',
         ];
 
-        if($r->language) {
+        if($r->id) {
 
-            $validationRules['header'] = 'required|max:200' . $r->language;
+            $validationRules['header'] = 'required|max:200' . $r->id;
         } else {
 
             $validationRules['header'] = 'required|max:200';
@@ -60,14 +60,14 @@ class HomeController extends Controller
     'uitleg' => $r->uitleg,
     'abonneer' => $r->abonneer,
     'abonneer_btn' => $r->abonneer_btn,
-    'donneer' => $r->donneer,
-    'donneer_btn' => $r->donneer_btn,
+    'doneer' => $r->doneer,
+    'doneer_btn' => $r->doneer_btn,
     'language' => $r->language,
         ];
 
-        if($r->language) {
+        if($r->id) {
             // klant update
-            $home = HomePage::where('language', $r->language)->first();
+            $home = HomePage::where('id', $r->id)->first();
             $home->update($data);
         } else {
 
@@ -82,7 +82,7 @@ class HomeController extends Controller
     // Delete
 
     public function destroy (HomePage $home) {
-        $home = HomePage::find($home->language);
+        $home = HomePage::find($home->id);
         $home->delete();
 
         return redirect()->route('admin.home');

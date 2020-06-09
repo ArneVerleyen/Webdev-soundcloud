@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\DonateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,8 +31,11 @@ Route::get('/albums', 'AlbumController@getIndex')->name('albums');
 Route::get('/albums/{id?}', 'AlbumController@show')->name('albums.show');
 
 Route::get('/donate', 'DonateController@getDonatePage')->name('donate');
+Route::post('/donate/make', 'DonateController@makeDonation')->name('makeDonation');
 
-Route::get('/admin', 'DashboardController@getIndex')->name('dashboard');
+Route::get('/payment','DonateController@getMakePayment')->name('makePayment');
+Route::get('/succes', 'DonateController@')->name('payment.succes');
+
 
 
 
@@ -40,6 +44,7 @@ Route::get('/admin', 'DashboardController@getIndex')->name('dashboard');
 Route::name('webhooks.mollie')->post('webhooks/mollie', 'WebhookController@handle');
 
 // admin
+Route::get('admin', 'DashboardController@getIndex')->name('dashboard');
 
 // Blogs
 Route::get('admin/blogs', 'admin\BlogController@getIndex')->name('admin.blogs');
@@ -51,9 +56,9 @@ Route::delete('admin/blogs/{album?}', 'admin\BlogController@destroy')->name('blo
 // Home
 Route::get('admin/home', 'admin\HomeController@getIndex')->name('admin.home');
 Route::get('admin/home/new', 'admin\HomeController@getCreate')->name('home.new');
-Route::get('admin/home/{language?}', 'admin\HomeController@getEdit')->name('home.edit');
+Route::get('admin/home/{home?}', 'admin\HomeController@getEdit')->name('home.edit');
 Route::post('admin/home/save', 'admin\HomeController@postSave')->name('home.save');
-Route::delete('admin/home/{language?}', 'admin\HomeController@destroy')->name('home.destroy');
+Route::delete('admin/home/{home?}', 'admin\HomeController@destroy')->name('home.destroy');
 
 
 

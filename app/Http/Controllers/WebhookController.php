@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Donation;
 use Illuminate\Http\Request;
 use Mollie\Laravel\Facades\Mollie;
+
 
 class WebhookController extends Controller
 {
@@ -11,10 +14,19 @@ class WebhookController extends Controller
             return;
         }
         $payment = Mollie::api()->payments()->get($request->id);
+
+        $data = [
+            'message' => '$request->message',
+            'amount' => $request->amount,
+            'currency'=> $request->currency,
+        ];
         if ($payment ->isPaid()) {
-            // doe iets
+
+            //geslaagd
+            $donation = Donation::create($data);
+
         } else {
-           // doe iets anders
+            //niet geslaagd
         }
     }
 }

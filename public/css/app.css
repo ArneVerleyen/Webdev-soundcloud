@@ -272,6 +272,24 @@ textarea {
   margin: 30vh 0 30vh 20vw;
 }
 
+.input-donate {
+  width: 40vw;
+  margin-left: 50px;
+}
+
+.button-donate {
+  width: 200px;
+  margin-left: 50px;
+}
+
+.donate-container {
+  height: 80vh;
+}
+
+.donate-form {
+  margin: 50px;
+}
+
 .sidebar-wrapper {
   display: flex;
   width: 100%;

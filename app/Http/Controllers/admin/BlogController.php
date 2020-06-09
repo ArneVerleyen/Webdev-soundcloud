@@ -50,25 +50,25 @@ class BlogController extends Controller
         $r->validate($validationRules);
 
 
-    $data = [
-    'title' => $r->title,
-    'artist' => $r->artist,
-    'description' => $r->description,
-    'beschrijving' => $r->beschrijving,
-    'img_url' => $r->img_url,
-    'released' => $r->released,
-        ];
+        $data = [
+        'title' => $r->title,
+        'artist' => $r->artist,
+        'description' => $r->description,
+        'beschrijving' => $r->beschrijving,
+        'img_url' => $r->img_url,
+        'released' => $r->released,
+            ];
 
         if($r->id) {
-            // klant update
+
             $album = Album::where('id', $r->id)->first();
             $album->update($data);
         } else {
 
-            // in de clients tabel steken
+
             $album = Album::create($data);
         }
-                // dd($client);
+
 
         return redirect()->route('admin.blogs');
     }

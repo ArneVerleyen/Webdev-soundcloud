@@ -12,31 +12,39 @@
         @csrf
 
         @if($home)
-        <input type="hidden" name="id" value="{{$home->language}}" >
+        <input type="hidden" name="id" value="{{$home->id}}">
         @endif
         <div class="medium-4 columns">
-            <label for="">Title</label>
-            <input name="title" type="text" value="{{ old('title', ($album ? $album->title: '')) }}" class='@error('title') invalid @enderror'>
+            <label for="">Header</label>
+            <input name="header" type="text" value="{{ old('header', ($home ? $home->header: '')) }}" class='@error('header') invalid @enderror'>
         </div>
         <div class="medium-4 columns">
-            <label for="">Artist</label>
-            <input name="artist" type="text" value="{{ old('artist', ($album ? $album->artist: '')) }}" class='@error('artist') invalid @enderror'>
+            <label for="">Title above albums</label>
+            <input name="titel_albums" type="text" value="{{ old('titel_albums', ($home ? $home->titel_albums: '')) }}" class='@error('titel_albums') invalid @enderror'>
         </div>
         <div class="medium-4 columns">
-            <label for="">Description</label>
-            <textarea rows="10" name="description" type="text" class='@error('description') invalid @enderror'>{{ old('description', ($album ? $album->description: '')) }}</textarea>
+            <label for="">Description Soundcloud</label>
+            <textarea rows="10" name="uitleg" type="text" class='@error('uitleg') invalid @enderror'>{{ old('uitleg', ($home ? $home->uitleg: '')) }}</textarea>
         </div>
         <div class="medium-4 columns">
-            <label for="">Beschrijving</label>
-            <textarea class="larger-input" name="beschrijving" type="text" class='@error('beschrijving') invalid @enderror'>{{ old('beschrijving', ($album ? $album->beschrijving: '')) }}</textarea>
+            <label for="">Subscribe</label>
+            <input class="larger-input" name="abonneer" type="text" class='@error('abonneer') invalid @enderror' value="{{ old('abonneer', ($home ? $home->abonneer: '')) }}">
         </div>
         <div>
-            <label for="">Released</label>
-            <input name="released" type="text"  value="{{ old('released', ($album ? $album->released: '')) }}" class='@error('released') invalid @enderror' >
+            <label for="">Subscribe button</label>
+            <input name="abonneer_btn" type="text"  value="{{ old('abonneer_btn', ($home ? $home->abonneer_btn: '')) }}" class='@error('abonneer_btn') invalid @enderror' >
         </div>
         <div class="medium-4 columns">
-            <label for="">Image URL</label>
-            <input name="img_url" type="text" value="{{ old('img_url', ($album ? $album->img_url: '')) }}" class='@error('img_url') invalid @enderror'>
+            <label for="">Donate</label>
+            <input name="doneer" type="text" value="{{ old('doneer', ($home ? $home->doneer: '')) }}" class='@error('doneer') invalid @enderror'>
+        </div>
+        <div class="medium-4 columns">
+            <label for="">Donate button</label>
+            <input name="doneer_btn" type="text" value="{{ old('doneer_btn', ($home ? $home->doneer_btn: '')) }}" class='@error('doneer_btn') invalid @enderror'>
+        </div>
+        <div class="medium-4 columns">
+            <label for="">Language</label>
+            <input name="language" type="text" value="{{ old('language', ($home ? $home->language: '')) }}" class='@error('language') invalid @enderror'>
         </div>
         <div class="medium-12  columns">
             <input value="SAVE" class="button success hollow" type="submit">
