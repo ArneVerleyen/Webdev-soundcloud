@@ -46,9 +46,11 @@
         <p class="body-text">
             {{ $home->abonneer }}
         </p>
-        <button class="orange-btn">
-            <p>{{ $home->abonneer_btn }}</p>
-        </button>
+        <a href="{{route('subscribe', app()->getLocale())}}">
+            <button class="orange-btn">
+                <p>{{ $home->abonneer_btn }}</p>
+            </button>
+        </a>
     </div>
     <div class="body-content-center">
         <p class="body-text">

@@ -4,6 +4,7 @@ use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\DonateController;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,6 +39,8 @@ Route::get('/succes', 'DonateController@')->name('payment.succes');
 
 Route::get('/donate/list', 'DonateController@getDonations')->name('donate.list');
 
+Route::get('/subscribe', 'NewsletterController@getSubscribe')->name('subscribe');
+Route::post('/subscribe', 'NewsletterController@postSubscriber')->name('subscribe.post');
 
 
 
@@ -46,8 +49,9 @@ Route::get('/donate/list', 'DonateController@getDonations')->name('donate.list')
 Route::name('webhooks.mollie')->post('webhooks/mollie', 'WebhookController@handle');
 
 // admin
-Route::get('admin', 'DashboardController@getIndex')->name('dashboard');
-
+Route::get('admin/login', 'admin\AdminController@getIndex')->name('dashboard');
+Route::post('admin/login', 'admin\AdminController@checkLogin')->name('check.login');
+Route::get('admin/loggedin', );
 // Blogs
 Route::get('admin/blogs', 'admin\BlogController@getIndex')->name('admin.blogs');
 Route::get('admin/blogs/new', 'admin\BlogController@getCreate')->name('blogs.new');
@@ -68,4 +72,13 @@ Route::get('admin/donations', 'admin\DonateController@getDonationsAdmin')->name(
 
 
 
+Auth::routes();
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
