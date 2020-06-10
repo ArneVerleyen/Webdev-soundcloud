@@ -1,7 +1,13 @@
+<style>
+.newsletter{
+    height: 50vh;
+    margin: 50px;
+}
+</style>
 @extends('layout')
 
 @section('content')
-<div class="d-flex align-items-center align-center">
+<div class="d-flex newsletter align-items-center align-center">
     @if (session('succes'))
         <div class="alert alert-succes" role="alert">
             {{session('succes')}}
@@ -16,7 +22,7 @@
        @csrf
        <label for="">E-mail adres</label>
        <input type="email" name="email">
-       <button type="submit">Subscribe</button>
+       <button class="mail-btn" type="submit">Subscribe</button>
    </form>
 </div>
 @endsection
