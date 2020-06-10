@@ -290,6 +290,36 @@ textarea {
   margin: 50px;
 }
 
+.donate-list-link {
+  margin: 50px;
+  text-decoration: none;
+  color: #F6640F;
+}
+
+.donate-list-link:hover {
+  margin: 50px;
+  text-decoration: none;
+  color: #CE4300;
+}
+
+.donations-list-item {
+  justify-content: center;
+  vertical-align: middle;
+  color: #F6640F;
+  border-bottom: solid 1px #F6640F;
+  height: 50px;
+  margin: 30px;
+}
+
+.donations-list-header {
+  justify-content: center;
+  vertical-align: middle;
+  color: #CE4300;
+  border-bottom: solid 2px #CE4300;
+  height: 50px;
+  margin: 30px;
+}
+
 .sidebar-wrapper {
   display: flex;
   width: 100%;

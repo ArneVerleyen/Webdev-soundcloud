@@ -21,6 +21,8 @@
         <button class="button-donate" type="submit">Doneer</button>
     </form>
 
+    <a class="donate-list-link"href="{{route('donate.list', app()->getLocale())}}">Donation list</a>
+
 
 </div>
 @endsection

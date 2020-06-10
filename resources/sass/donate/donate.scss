@@ -14,3 +14,15 @@
 .donate-form{
     margin: 50px;
 }
+
+.donate-list-link{
+    margin: 50px;
+    text-decoration: none;
+    color: $color-orange;
+}
+
+.donate-list-link:hover{
+    margin: 50px;
+    text-decoration: none;
+    color: $color-dark-orange;
+}

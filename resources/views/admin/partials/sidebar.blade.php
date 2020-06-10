@@ -15,7 +15,7 @@
                 <a href="{{route('admin.blogs', app()->getLocale())}}">Blogs</a>
             </li>
             <li>
-                <a href="#">Donate</a>
+                <a href="{{route('admin.donations', app()->getLocale())}}">Donations</a>
             </li>
             <li>
                 <a href=""></a>

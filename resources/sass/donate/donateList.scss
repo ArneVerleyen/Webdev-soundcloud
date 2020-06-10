@@ -1,0 +1,17 @@
+.donations-list-item{
+    justify-content: center;
+    vertical-align: middle;
+    color: $color-orange;
+    border-bottom: solid 1px $color-orange;
+    height: 50px;
+    margin: 30px;
+}
+
+.donations-list-header{
+    justify-content: center;
+    vertical-align: middle;
+    color: $color-dark-orange;
+    border-bottom: solid 2px $color-dark-orange;
+    height: 50px;
+    margin: 30px;
+}

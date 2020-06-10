@@ -36,6 +36,8 @@ Route::post('/donate/make', 'DonateController@makeDonation')->name('makeDonation
 Route::get('/payment','DonateController@getMakePayment')->name('makePayment');
 Route::get('/succes', 'DonateController@')->name('payment.succes');
 
+Route::get('/donate/list', 'DonateController@getDonations')->name('donate.list');
+
 
 
 
@@ -60,7 +62,9 @@ Route::get('admin/home/{home?}', 'admin\HomeController@getEdit')->name('home.edi
 Route::post('admin/home/save', 'admin\HomeController@postSave')->name('home.save');
 Route::delete('admin/home/{home?}', 'admin\HomeController@destroy')->name('home.destroy');
 
+// Donations
 
+Route::get('admin/donations', 'admin\DonateController@getDonationsAdmin')->name('admin.donations');
 
 
 
